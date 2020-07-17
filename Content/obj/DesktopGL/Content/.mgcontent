@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/hunte/source/repos/ColorSquares/Content/BannerHeader.spritefont</File>
+    <File>C:/Users/hunte/source/repos/ColorSquares/Content/BannerWords.spritefont</File>
+    <File>C:/Users/hunte/source/repos/ColorSquares/Content/ColorSquares.png</File>
+    <File>C:/Users/hunte/source/repos/ColorSquares/Content/GameEndBanner.png</File>
+    <File>C:/Users/hunte/source/repos/ColorSquares/Content/HUD.spritefont</File>
+    <File>C:/Users/hunte/source/repos/ColorSquares/Content/square.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>
