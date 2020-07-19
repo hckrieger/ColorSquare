@@ -1,7 +1,7 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/hunte/source/repos/ColorSquares/Content/BannerHeader.spritefont","C:/Users/hunte/source/repos/ColorSquares/Content/bin/DesktopGL/BannerHeader.xnb","FontDescriptionProcessor","SpriteFontContent",2008,37905,0.8339384
-"C:/Users/hunte/source/repos/ColorSquares/Content/BannerWords.spritefont","C:/Users/hunte/source/repos/ColorSquares/Content/bin/DesktopGL/BannerWords.xnb","FontDescriptionProcessor","SpriteFontContent",2008,21521,0.0610152
+"C:/Users/hunte/source/repos/ColorSquares/Content/BannerHeader.spritefont","C:/Users/hunte/source/repos/ColorSquares/Content/bin/DesktopGL/BannerHeader.xnb","FontDescriptionProcessor","SpriteFontContent",2008,70673,2.530361
+"C:/Users/hunte/source/repos/ColorSquares/Content/BannerWords.spritefont","C:/Users/hunte/source/repos/ColorSquares/Content/bin/DesktopGL/BannerWords.xnb","FontDescriptionProcessor","SpriteFontContent",2008,37905,0.1140133
+"C:/Users/hunte/source/repos/ColorSquares/Content/Border.png","C:/Users/hunte/source/repos/ColorSquares/Content/bin/DesktopGL/Border.xnb","TextureProcessor","Texture2DContent",3255,1920085,0.5804029
 "C:/Users/hunte/source/repos/ColorSquares/Content/ColorSquares.png","C:/Users/hunte/source/repos/ColorSquares/Content/bin/DesktopGL/ColorSquares.xnb","TextureProcessor","Texture2DContent",398,80085,0.5041305
 "C:/Users/hunte/source/repos/ColorSquares/Content/GameEndBanner.png","C:/Users/hunte/source/repos/ColorSquares/Content/bin/DesktopGL/GameEndBanner.xnb","TextureProcessor","Texture2DContent",1155,480085,0.3121703
-"C:/Users/hunte/source/repos/ColorSquares/Content/HUD.spritefont","C:/Users/hunte/source/repos/ColorSquares/Content/bin/DesktopGL/HUD.xnb","FontDescriptionProcessor","SpriteFontContent",2008,21521,4.79606
 "C:/Users/hunte/source/repos/ColorSquares/Content/square.png","C:/Users/hunte/source/repos/ColorSquares/Content/bin/DesktopGL/square.xnb","TextureProcessor","Texture2DContent",156,10085,2.545206

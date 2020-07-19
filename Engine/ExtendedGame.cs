@@ -36,6 +36,8 @@ class ExtendedGame : Game
     public static Random Random { get; private set; }
 
     public static bool Pause { get; set; }
+    public static Color BackgroundColor { get; set; }
+
 
     /// <summary>
     /// An object for loading assets throughout the game.
@@ -59,6 +61,8 @@ class ExtendedGame : Game
         // create the input helper and random number generator
         inputHelper = new InputHelper();
         Random = new Random();
+
+        BackgroundColor = Color.Black;
 
         // default window and world size
         windowSize = new Point(800, 600);
@@ -117,7 +121,7 @@ class ExtendedGame : Game
     /// <param name="gameTime">An object containing information about the time that has passed.</param>
     protected override void Draw(GameTime gameTime)
     {
-        GraphicsDevice.Clear(Color.Black);
+        GraphicsDevice.Clear(BackgroundColor);
 
         // start drawing sprites, applying the scaling matrix
         spriteBatch.Begin(SpriteSortMode.Deferred, null, null, null, null, null, spriteScale);

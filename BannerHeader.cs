@@ -7,7 +7,7 @@ namespace ColorSquares
         public BannerHeader() : base("BannerHeader", Color.Black, Alignment.Center)
         {
             LocalPosition = new Vector2(400, 166);
-            Visible = false;
+            Text = "Color Squares";
         }
     }
 }

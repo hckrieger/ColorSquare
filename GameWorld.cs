@@ -17,29 +17,32 @@ namespace ColorSquares
         Enemy violetEnemy = new Enemy(Color.Violet, new Vector2(400, 550));
         Enemy purpleEnemy = new Enemy(Color.Purple, new Vector2(750, 550));
 
-        ScoreHUD scoreText = new ScoreHUD(new Vector2(600, 50));
-        LivesHUD livesText = new LivesHUD(new Vector2(600, 100));
+        Stats stats = new Stats(new Vector2(775, 25));
         BannerHeader bannerHeaderText = new BannerHeader();
         BannerWords bannerWordsText = new BannerWords();
 
-        EndBanner banner = new EndBanner();
 
+        Border border = new Border();
+
+        EndBanner banner = new EndBanner();
+        float colorTimer = .05f;
         float invincibilityTime = 1f;
         bool invincible = false;
+        bool damage = false;
+        bool match = false;
 
         public GameWorld()
         {
             GameObject[] gameObjects = { redEnemy, orangeEnemy, yellowEnemy, greenEnemy, purpleEnemy, 
-                                         blueEnemy, indigoEnemy, violetEnemy, player, scoreText, livesText,
-                                         banner, bannerHeaderText, bannerWordsText };
+                                         blueEnemy, indigoEnemy, violetEnemy, player, stats,
+                                         banner, bannerHeaderText, bannerWordsText, border };
 
             foreach (GameObject obj in gameObjects)
             {
                 AddChild(obj);
             }
 
-           
-
+            ExtendedGame.Pause = true;
         }
 
         public override void Update(GameTime gameTime, InputHelper inputHelper)
@@ -54,26 +57,18 @@ namespace ColorSquares
 
             int randIndx = ExtendedGame.Random.Next(0, 8);
 
-            if (invincible)
-            {
-                invincibilityTime -= (float)gameTime.ElapsedGameTime.TotalSeconds;
-                if (invincibilityTime <= 0)
-                {
-                    invincibilityTime = 1f;
-                    invincible = false;
-                }
-            }
-           
-
             for (int i = 0; i < enemies.Length; i++)
             {
                 
                     if (enemies[i].BoundingBox.Intersects(player.BoundingBox) && enemies[i].Color == player.TargetColor && !invincible)
                     {
+                        
                         player.TargetColor = colors[randIndx];
 
+                      
+                        stats.Score++;
+                        stats.Total++;
 
-                        scoreText.Score++;
                         invincible = true;
 
                     }
@@ -81,34 +76,66 @@ namespace ColorSquares
                     if (enemies[i].BoundingBox.Intersects(player.BoundingBox) && enemies[i].Color != player.TargetColor && !invincible)
                     {
 
-                        livesText.Lives--;
+                        stats.Lives--;
                         invincible = true;
+                        damage = true;
+                        
 
                     }
 
                 
             }
             
-            if (livesText.Lives <= 0)
+            if (stats.Lives <= 0)
             {
-                ExtendedGame.Pause = true;
+                  ExtendedGame.Pause = true;
+              
+                  stats.Tries++;
 
-                bannerHeaderText.Text = "Color Squares";
-                bannerWordsText.Text = "Score: " + scoreText.Score.ToString() + ".";
-                bannerWordsText.Text += "\n  \nPress Spacebar to play again.";
+                  bannerWordsText.Text = "Score: " + stats.Score.ToString() + ".\n";
+                  bannerWordsText.Text += "Average: " + stats.Average.ToString() + ".\n";
+                  bannerWordsText.Text += "Record: " + stats.Record.ToString() + ".\n";
+                  bannerWordsText.Text += "Tries: " + stats.Tries.ToString() + ".\n";
+                  bannerWordsText.Text += "Total: " + stats.Total.ToString() + ".\n\n";
+                  bannerWordsText.Text += "Press Spacebar to play again.";
 
-                GameObject[] gameObjects = { player, redEnemy, orangeEnemy, yellowEnemy, greenEnemy, purpleEnemy,
-                                            blueEnemy, indigoEnemy, violetEnemy, scoreText, livesText };
+                  GameObject[] gameObjects = { player, redEnemy, orangeEnemy, yellowEnemy, greenEnemy, purpleEnemy,
+                                              blueEnemy, indigoEnemy, violetEnemy, stats };
 
-                foreach (GameObject obj in gameObjects)
+                  foreach (GameObject obj in gameObjects)
+                  {
+                      obj.Reset();
+                  }
+
+
+                  bannerWordsText.Visible = true;
+                  bannerHeaderText.Visible = true;
+                  banner.Visible = true; 
+
+            }
+
+            if (invincible)
+            {
+                invincibilityTime -= dt;
+                if (invincibilityTime <= 0)
                 {
-                    obj.Reset();
+
+                    invincibilityTime = 1f;
+                    invincible = false;
                 }
 
-                bannerWordsText.Visible = true;
-                bannerHeaderText.Visible = true;
-                banner.Visible = true;
+            }
 
+            if (damage)
+            {
+                colorTimer -= dt;
+                ExtendedGame.BackgroundColor = Color.Red;
+                if (colorTimer <= 0)
+                {
+                    ExtendedGame.BackgroundColor = Color.Black;
+                    colorTimer = .1f;
+                    damage = false;
+                }
             }
 
             if (ExtendedGame.Pause)
@@ -119,6 +146,8 @@ namespace ColorSquares
                     bannerHeaderText.Visible = false;
                     bannerWordsText.Visible = false;
                     ExtendedGame.Pause = false;
+
+
                 }
             }
 

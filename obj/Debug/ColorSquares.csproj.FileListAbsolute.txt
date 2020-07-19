@@ -19,7 +19,7 @@ C:\Users\hunte\source\repos\ColorSquares\obj\Debug\ColorSquares.csproj.CopyCompl
 C:\Users\hunte\source\repos\ColorSquares\obj\Debug\ColorSquares.exe
 C:\Users\hunte\source\repos\ColorSquares\obj\Debug\ColorSquares.pdb
 C:\Users\hunte\source\repos\ColorSquares\bin\DesktopGL\AnyCPU\Debug\Content\square.xnb
-C:\Users\hunte\source\repos\ColorSquares\bin\DesktopGL\AnyCPU\Debug\Content\HUD.xnb
 C:\Users\hunte\source\repos\ColorSquares\bin\DesktopGL\AnyCPU\Debug\Content\GameEndBanner.xnb
 C:\Users\hunte\source\repos\ColorSquares\bin\DesktopGL\AnyCPU\Debug\Content\BannerWords.xnb
 C:\Users\hunte\source\repos\ColorSquares\bin\DesktopGL\AnyCPU\Debug\Content\BannerHeader.xnb
+C:\Users\hunte\source\repos\ColorSquares\bin\DesktopGL\AnyCPU\Debug\Content\Border.xnb

@@ -1,7 +1,7 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
 "C:/Users/hunte/source/repos/ColorSquares/Content/BannerHeader.spritefont","C:/Users/hunte/source/repos/ColorSquares/Content/bin/DesktopGL/Content/BannerHeader.xnb","FontDescriptionProcessor","SpriteFontContent",2008,70673,0.8972217
 "C:/Users/hunte/source/repos/ColorSquares/Content/BannerWords.spritefont","C:/Users/hunte/source/repos/ColorSquares/Content/bin/DesktopGL/Content/BannerWords.xnb","FontDescriptionProcessor","SpriteFontContent",2008,37905,0.7361727
+"C:/Users/hunte/source/repos/ColorSquares/Content/Border.png","C:/Users/hunte/source/repos/ColorSquares/Content/bin/DesktopGL/Content/Border.xnb","TextureProcessor","Texture2DContent",3255,1920085,3.354335
 "C:/Users/hunte/source/repos/ColorSquares/Content/ColorSquares.png","C:/Users/hunte/source/repos/ColorSquares/Content/bin/DesktopGL/Content/ColorSquares.xnb","TextureProcessor","Texture2DContent",398,80085,0.748772
 "C:/Users/hunte/source/repos/ColorSquares/Content/GameEndBanner.png","C:/Users/hunte/source/repos/ColorSquares/Content/bin/DesktopGL/Content/GameEndBanner.xnb","TextureProcessor","Texture2DContent",1155,480085,0.2760697
-"C:/Users/hunte/source/repos/ColorSquares/Content/HUD.spritefont","C:/Users/hunte/source/repos/ColorSquares/Content/bin/DesktopGL/Content/HUD.xnb","FontDescriptionProcessor","SpriteFontContent",2008,21521,1.204464
 "C:/Users/hunte/source/repos/ColorSquares/Content/square.png","C:/Users/hunte/source/repos/ColorSquares/Content/bin/DesktopGL/Content/square.xnb","TextureProcessor","Texture2DContent",156,10085,0.5851834

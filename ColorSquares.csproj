@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="BannerHeader.cs" />
     <Compile Include="BannerWords.cs" />
+    <Compile Include="Border.cs" />
     <Compile Include="EndBanner.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="Engine\AssetManager.cs" />
@@ -56,13 +57,11 @@
     <Compile Include="Engine\VisibilityTimer.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="GameWorld.cs" />
-    <Compile Include="LivesHUD.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ScoreHUD.cs" />
-    <Compile Include="Square.cs" />
     <Compile Include="Stats.cs" />
+    <Compile Include="Square.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">

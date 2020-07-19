@@ -9,7 +9,7 @@ namespace ColorSquares
         {
             SetOriginToCenter();
             LocalPosition = new Vector2(400, 300);
-            Visible = false;
+            Visible = true;
         }
     }
 }

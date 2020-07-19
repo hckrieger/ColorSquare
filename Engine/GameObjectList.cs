@@ -48,6 +48,8 @@ class GameObjectList : GameObject
     {
         foreach (GameObject obj in children)
             obj.Update(gameTime, inputHelper);
+
+        base.Update(gameTime, inputHelper);
     }
 
     /// <summary>

@@ -6,9 +6,9 @@
   <SourceFiles>
     <File>C:/Users/hunte/source/repos/ColorSquares/Content/BannerHeader.spritefont</File>
     <File>C:/Users/hunte/source/repos/ColorSquares/Content/BannerWords.spritefont</File>
+    <File>C:/Users/hunte/source/repos/ColorSquares/Content/Border.png</File>
     <File>C:/Users/hunte/source/repos/ColorSquares/Content/ColorSquares.png</File>
     <File>C:/Users/hunte/source/repos/ColorSquares/Content/GameEndBanner.png</File>
-    <File>C:/Users/hunte/source/repos/ColorSquares/Content/HUD.spritefont</File>
     <File>C:/Users/hunte/source/repos/ColorSquares/Content/square.png</File>
   </SourceFiles>
   <DestFiles>

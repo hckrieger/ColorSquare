@@ -24,8 +24,11 @@ namespace ColorSquares
         {
             TargetColor = Color.Green;
             Color = color;
+
             LocalPosition = pos;
+
             StartPos = pos;
+
             posX = LocalPosition.X;
             posY = LocalPosition.Y;
         }
@@ -33,6 +36,9 @@ namespace ColorSquares
         public override void Reset()
         {
             LocalPosition = StartPos;
+            posX = StartPos.X;
+            posY = StartPos.Y;
+
         }
 
         public override void Update(GameTime gameTime, InputHelper inputHelper)
@@ -61,7 +67,6 @@ namespace ColorSquares
                     posX += speed * dt;
                 }
 
-                //Alternates the color of the player from White to the target color every .35 seconds. 
                 colorTimer1 -= dt;
 
                 if (colorTimer1 <= 0)
@@ -81,14 +86,15 @@ namespace ColorSquares
                 {
                     Color = Color.White;
                 }
-            } 
+            }
+
 
             //Constrain the player on the screen
             if (posX <= 0)   { posX = 0; }
             if (posY <= 0)   { posY = 0; }           
             if (posX >= 750) { posX = 750; } 
             if (posY >= 550) { posY = 550; } 
-            
+
             base.Update(gameTime, inputHelper);
         }
 
