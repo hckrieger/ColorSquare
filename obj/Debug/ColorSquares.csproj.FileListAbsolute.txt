@@ -23,3 +23,7 @@ C:\Users\hunte\source\repos\ColorSquares\bin\DesktopGL\AnyCPU\Debug\Content\Game
 C:\Users\hunte\source\repos\ColorSquares\bin\DesktopGL\AnyCPU\Debug\Content\BannerWords.xnb
 C:\Users\hunte\source\repos\ColorSquares\bin\DesktopGL\AnyCPU\Debug\Content\BannerHeader.xnb
 C:\Users\hunte\source\repos\ColorSquares\bin\DesktopGL\AnyCPU\Debug\Content\Border.xnb
+C:\Users\hunte\source\repos\ColorSquares\bin\DesktopGL\AnyCPU\Debug\Content\addScore.xnb
+C:\Users\hunte\source\repos\ColorSquares\bin\DesktopGL\AnyCPU\Debug\Content\damage.xnb
+C:\Users\hunte\source\repos\ColorSquares\bin\DesktopGL\AnyCPU\Debug\Content\snd_music.xnb
+C:\Users\hunte\source\repos\ColorSquares\bin\DesktopGL\AnyCPU\Debug\Content\snd_music.ogg

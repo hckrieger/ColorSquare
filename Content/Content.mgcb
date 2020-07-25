@@ -13,6 +13,12 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin addScore.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:addScore.wav
+
 #begin BannerHeader.spritefont
 /importer:FontDescriptionImporter
 /processor:FontDescriptionProcessor
@@ -51,6 +57,12 @@
 /processorParam:TextureFormat=Color
 /build:ColorSquares.png
 
+#begin damage.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:damage.wav
+
 #begin GameEndBanner.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -62,6 +74,12 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:GameEndBanner.png
+
+#begin snd_music.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:snd_music.mp3
 
 #begin square.png
 /importer:TextureImporter

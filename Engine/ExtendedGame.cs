@@ -84,7 +84,7 @@ class ExtendedGame : Game
         gameWorld = new GameObjectList();
 
         // by default, we're not running in full-screen mode
-        FullScreen = false;
+        FullScreen = true;
     }
 
     /// <summary>

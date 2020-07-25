@@ -1,5 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework.Media;
 using System;
 
 namespace ColorSquares
@@ -8,8 +10,8 @@ namespace ColorSquares
     class GameWorld : GameObjectList
     {
         Player player = new Player(Color.White, new Vector2(400, 300));
-        Enemy redEnemy = new Enemy(Color.Red, new Vector2(0, 0));
-        Enemy orangeEnemy = new Enemy(Color.DarkOrange, new Vector2(0, 300));
+        Enemy redEnemy = new Enemy(Color.DarkRed, new Vector2(0, 0));
+        Enemy orangeEnemy = new Enemy(Color.OrangeRed, new Vector2(0, 300));
         Enemy yellowEnemy = new Enemy(Color.Yellow, new Vector2(0, 550));
         Enemy greenEnemy = new Enemy(Color.Green, new Vector2(400, 0));
         Enemy blueEnemy = new Enemy(Color.Blue, new Vector2(750, 0));
@@ -29,7 +31,7 @@ namespace ColorSquares
         float invincibilityTime = 1f;
         bool invincible = false;
         bool damage = false;
-        bool match = false;
+
 
         public GameWorld()
         {
@@ -43,6 +45,9 @@ namespace ColorSquares
             }
 
             ExtendedGame.Pause = true;
+
+            ExtendedGame.AssetManager.PlaySong("snd_music", true);
+
         }
 
         public override void Update(GameTime gameTime, InputHelper inputHelper)
@@ -52,7 +57,7 @@ namespace ColorSquares
             Enemy[] enemies = { redEnemy, orangeEnemy, yellowEnemy, greenEnemy,
                                 blueEnemy, indigoEnemy, violetEnemy, purpleEnemy };
 
-            Color[] colors = { Color.Red, Color.DarkOrange, Color.Yellow, Color.Green,
+            Color[] colors = { Color.DarkRed, Color.OrangeRed, Color.Yellow, Color.Green,
                                Color.Blue, Color.Indigo, Color.Violet, Color.Purple };
 
             int randIndx = ExtendedGame.Random.Next(0, 8);
@@ -62,26 +67,23 @@ namespace ColorSquares
                 
                     if (enemies[i].BoundingBox.Intersects(player.BoundingBox) && enemies[i].Color == player.TargetColor && !invincible)
                     {
-                        
                         player.TargetColor = colors[randIndx];
-
                       
                         stats.Score++;
                         stats.Total++;
-
                         invincible = true;
 
-                    }
+                        ExtendedGame.AssetManager.PlaySoundEffect("addScore");
+                }
 
                     if (enemies[i].BoundingBox.Intersects(player.BoundingBox) && enemies[i].Color != player.TargetColor && !invincible)
                     {
-
                         stats.Lives--;
                         invincible = true;
                         damage = true;
-                        
 
-                    }
+                        ExtendedGame.AssetManager.PlaySoundEffect("damage");
+                }
 
                 
             }
@@ -92,11 +94,13 @@ namespace ColorSquares
               
                   stats.Tries++;
 
-                  bannerWordsText.Text = "Score: " + stats.Score.ToString() + ".\n";
-                  bannerWordsText.Text += "Average: " + stats.Average.ToString() + ".\n";
-                  bannerWordsText.Text += "Record: " + stats.Record.ToString() + ".\n";
-                  bannerWordsText.Text += "Tries: " + stats.Tries.ToString() + ".\n";
-                  bannerWordsText.Text += "Total: " + stats.Total.ToString() + ".\n\n";
+                  bannerHeaderText.Text = "Nice Try!";
+
+                  bannerWordsText.Text = "Score: " + stats.Score.ToString() + "\n";
+                  bannerWordsText.Text += "Average: " + stats.Average.ToString() + "\n";
+                  bannerWordsText.Text += "Record: " + stats.Record.ToString() + "\n";
+                  bannerWordsText.Text += "Tries: " + stats.Tries.ToString() + "\n";
+                  bannerWordsText.Text += "Total: " + stats.Total.ToString() + "\n\n";
                   bannerWordsText.Text += "Press Spacebar to play again.";
 
                   GameObject[] gameObjects = { player, redEnemy, orangeEnemy, yellowEnemy, greenEnemy, purpleEnemy,
@@ -138,6 +142,8 @@ namespace ColorSquares
                 }
             }
 
+
+
             if (ExtendedGame.Pause)
             {
                 if (inputHelper.KeyPressed(Keys.Space))
@@ -147,21 +153,14 @@ namespace ColorSquares
                     bannerWordsText.Visible = false;
                     ExtendedGame.Pause = false;
 
-
+                    
                 }
-            }
+            } 
 
 
 
             base.Update(gameTime, inputHelper);
 
-        }
-
-       
-
-
-            
-
-        
+        }  
     }
 }
