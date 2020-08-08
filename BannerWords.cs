@@ -6,12 +6,14 @@ namespace ColorSquares
     {
         public BannerWords() : base("BannerWords", Color.Black, Alignment.Center)
         {
-            LocalPosition = new Vector2(400, 230);
+            LocalPosition = new Vector2(415, 220);
 
             Text = "Use arrow keys to move around\n";
             Text += "Hit your target square color\n";
             Text += "Avoid the other squares\n\n";
-            Text += "Press Space to start\n\n";
+            Text += "Spacebar - Start\n";
+            Text += "F5 - Toggle Fullscreen \n";
+            Text += "Esc - Exit\n\n";
             Text += "   Created by Hunter Krieger";
         }
 

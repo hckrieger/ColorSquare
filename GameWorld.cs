@@ -97,13 +97,15 @@ namespace ColorSquares
                   bannerHeaderText.Text = "Nice Try!";
 
                   bannerWordsText.Text = "Score: " + stats.Score.ToString() + "\n";
+                  bannerWordsText.Text += "Tries: " + stats.Tries.ToString() + "\n";
                   bannerWordsText.Text += "Average: " + stats.Average.ToString() + "\n";
                   bannerWordsText.Text += "Record: " + stats.Record.ToString() + "\n";
-                  bannerWordsText.Text += "Tries: " + stats.Tries.ToString() + "\n";
                   bannerWordsText.Text += "Total: " + stats.Total.ToString() + "\n\n";
-                  bannerWordsText.Text += "Press Spacebar to play again.";
+                  bannerWordsText.Text += "Spacebar - Play Again\n";
+                  bannerWordsText.Text += "F5 - Toggle Fullscreen\n";
+                  bannerWordsText.Text += "Esc - Exit\n";
 
-                  GameObject[] gameObjects = { player, redEnemy, orangeEnemy, yellowEnemy, greenEnemy, purpleEnemy,
+                GameObject[] gameObjects = { player, redEnemy, orangeEnemy, yellowEnemy, greenEnemy, purpleEnemy,
                                               blueEnemy, indigoEnemy, violetEnemy, stats };
 
                   foreach (GameObject obj in gameObjects)
